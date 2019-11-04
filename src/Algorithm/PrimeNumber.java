@@ -1,4 +1,4 @@
-package DataStructure.Algorithm;
+package Algorithm;
 
 import java.util.Scanner;
 
@@ -13,6 +13,7 @@ public class PrimeNumber {
         Scanner input = new Scanner(System.in);
         int num;
         num = input.nextInt();
+        //求num以内的素数
         primer(num);
         for (int i = 0; i < num; i++){
             System.out.print(a[i]);

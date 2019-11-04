@@ -1,4 +1,4 @@
-package DataStructure.Algorithm;
+package Algorithm;
 
 import java.util.Scanner;
 
@@ -55,10 +55,13 @@ public class QuickSotr {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
+        //排序数组长度
         int num = input.nextInt();
+        //输入排序数组
         for (int i = 0; i < num; i++) {
             a[i] = input.nextInt();
         }
+        //排序
         quickSort(a, 0, num - 1);
         for (int i = 0; i < num; i++) {
             System.out.print(a[i] + " ");

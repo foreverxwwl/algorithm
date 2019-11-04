@@ -1,4 +1,4 @@
-package DataStructure.Algorithm;
+package Algorithm;
 
 /**
  * @outhor li
@@ -27,12 +27,17 @@ public class AdditionDecompostition {
      */
     public static void decompostition(int i, int[] a, int k) {
         for (int j = i; j > 0 ; j--){
+            //当本次分解出的数j比前面的数a[k-1]大时，跳过本次分解
             if (k > 0 && j > a[k - 1])
                 continue;
+            //将本次分解出的数存入数组
             a[k] = j;
+            //递归，将本次分解剩下的数i-j再次分解，深度k+1
             decompostition(i - j, a, k + 1);
         }
+        //当不能再分解时
         if (i <= 0){
+            //输出本次分解数组
             for (int j = 0; j < k; j++){
                 System.out.print(a[j]);
             }
