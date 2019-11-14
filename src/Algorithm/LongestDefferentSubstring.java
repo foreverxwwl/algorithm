@@ -14,6 +14,9 @@ public class LongestDefferentSubstring {
         Scanner input = new Scanner(System.in);
         String s = input.nextLine();
         int length1 = lengthOfLongestSubstring1(s);
+        int length3 = lengthOfLongestSubstring3(s);
+        System.out.println(length1);
+        System.out.println(length3);
     }
 
     /**
@@ -85,27 +88,30 @@ public class LongestDefferentSubstring {
         return max;
     }
 
-
-
     /**
      * 初始滑动窗口解法
+     * 定义一个每回合固定长度的窗口，看这个窗口内部是否有重复
      */
-    public int lengthOfLongestSubstring3(String s) {
+    public static int lengthOfLongestSubstring3(String s) {
         int n = s.length();
+        //定义一个可变长的窗口set，以此可以轻松调用方法判断有误重复
         Set<Character> set = new HashSet<>();
+        //ans:最长窗口的长度 i:窗口做边界 j:窗口右边界
         int ans = 0, i = 0, j = 0;
         while (i < n && j < n) {
-            // try to extend the range [i, j]
+            //在[i,j)的范围内查看有无与j重复元素
             if (!set.contains(s.charAt(j))){
+                //如果没重复则将此元素加入窗口，在指向下一个元素
                 set.add(s.charAt(j++));
+                //查看窗口长度，与最长记录比较
                 ans = Math.max(ans, j - i);
             }
             else {
+                //如果有重复，则将左边第一个元素移出窗口，直到将重复元素移出
                 set.remove(s.charAt(i++));
             }
         }
         return ans;
     }
-
 
 }
