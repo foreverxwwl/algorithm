@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * @outhor li
  * @create 2019-11-12 16:33
- * 二叉堆，最小二叉堆
+ * 二叉堆的上浮下浮和构建，最小二叉堆
  */
 public class BinaryHeap {
     /**
