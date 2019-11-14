@@ -1,4 +1,4 @@
-package DataStructure.LinkList;
+package DataStructure.LinkList.heap;
 
 import java.util.Arrays;
 
