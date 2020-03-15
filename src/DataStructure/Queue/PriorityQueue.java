@@ -1,4 +1,4 @@
-package DataStructure.LinkList.Queue;
+package DataStructure.Queue;
 
 import java.util.Arrays;
 import java.util.Scanner;

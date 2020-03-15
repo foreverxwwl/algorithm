@@ -1,6 +1,5 @@
-package DataStructure.LinkList.heap;
+package DataStructure.heap;
 
-import javax.xml.bind.SchemaOutputResolver;
 import java.util.Arrays;
 
 /**
